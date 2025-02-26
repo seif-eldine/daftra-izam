@@ -1,0 +1,25 @@
+
+
+.page-holder{
+  background-color: var(--grey-color-light);
+}
+
+.criteria-chip{
+  color: var(--grey-color);
+  background-color: var(--grey-color-light);
+  text-align: center;
+  font-weight: bold;
+  padding: var(--padding-base);
+  border-radius: var(--border-radius-sm);
+}
+
+.greenish{
+  color: var(--green-color);
+}
+
+
+// My Utils
+.vertical-liner{
+  width: 1px;
+  background-color: var(--grey-color);
+}

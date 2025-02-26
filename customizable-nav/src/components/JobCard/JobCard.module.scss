@@ -1,0 +1,47 @@
+
+.card {
+  padding: 20px;
+  border: 1px solid var(--grey-color-light);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--white-color);
+}
+
+.logoAndIntroHolder {
+  display: flex;
+  align-items: center;
+
+  .logo{
+    color: var(--black-color);
+    padding: var(--padding-base);
+  }
+
+  .jobTitle{
+    color: var(--black-color);
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+  }
+
+  .companyName{
+    color: var(--oasis-color);
+    font-size: var(--font-size-lg);
+  }
+}
+
+
+.locationAndTimeHolder{
+  span{
+    margin-inline: 10px;
+    color: var(--grey-color);
+    font-size: var(--font-size-sm);
+  }
+}
+
+.criteriasHolder{
+  margin-top: 10px;
+}
+
+.tagsHolder{
+  span{
+    color: var(--grey-color);
+  }
+}

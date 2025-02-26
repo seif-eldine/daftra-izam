@@ -1,0 +1,58 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "./variables.scss";
+@import "./custom.scss";
+
+.row, 
+.col, 
+[class^="col-"], 
+[class*=" col-"] {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.container, 
+.container-fluid {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-dm-sans), sans-serif;
+}
+
+.sidebar-toggle-btn {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sidebar-col {
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 767.98px) {
+  .sidebar-col {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 80%;
+    height: 100vh;
+    background: white;
+    z-index: 999;
+    overflow-y: auto;
+  }
+
+  .sidebar-col.sidebar-open {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .page-holder {
+    width: 100%;
+    padding-left: 0;
+  }
+}
