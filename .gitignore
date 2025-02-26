@@ -1,36 +1,19 @@
 # Ignore dependencies
-/node_modules
-/customizable-nav/node_modules
-/server/node_modules
+node_modules/
+server/node_modules/
+customizable-nav/node_modules/
 
-# Ignore package manager files
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+# Ignore build files
+customizable-nav/.next/
+customizable-nav/out/
+server/dist/
 
-# Ignore testing files
-/coverage
-
-# Ignore Next.js build files
-/.next/
-/out/
-/customizable-nav/.next
-/customizable-nav/out
-
-# Ignore production builds
-/build
-/customizable-nav/build
-/server/build
-
-# Ignore misc files
-.DS_Store
-*.pem
-
-# Ignore logs
-npm-debug.log*
+# Logs
+*.log
 yarn-debug.log*
-yarn-error.log*
+npm-debug.log*
+
+# Environment variables
+.env
+server/.env
+customizable-nav/.env
