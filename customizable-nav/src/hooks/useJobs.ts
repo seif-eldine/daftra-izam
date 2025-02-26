@@ -12,7 +12,7 @@ export interface Job{
 }
 
 // I create the static data outside of the component to NOT be tracked
-const apiUrl = "http://localhost:8081/";
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export function useJobs() {
   const [jobs, setJobs] = useState<Job[]>([]);
@@ -22,7 +22,7 @@ export function useJobs() {
   useEffect(() => {
     async function fetchJobs() {
       try {
-        const response = await fetch(`${apiUrl}jobs`);
+        const response = await fetch(`${API_URL}jobs`);
         if (!response.ok) throw new Error("Failed to fetch jobs");
         const data = await response.json();
         setJobs(data);

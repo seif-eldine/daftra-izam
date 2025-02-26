@@ -9,7 +9,7 @@ export interface NavItem {
   visible?: boolean;
 }
 
-const apiUrl = "http://localhost:8081/";
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export function useNavigation() {
   const [navItems, setNavItems] = useState<NavItem[]>([]);
@@ -19,7 +19,7 @@ export function useNavigation() {
   useEffect(() => {
     async function fetchNavigation() {
       try {
-        const response = await fetch(`${apiUrl}nav`);
+        const response = await fetch(`${API_URL}nav`);
         if (!response.ok) throw new Error("Failed to fetch navigation");
         const data = await response.json();
         console.log("El Data links fetched :", data)

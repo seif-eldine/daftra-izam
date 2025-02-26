@@ -17,11 +17,11 @@ export interface NavItem {
 }
 
 // I create the static data outside of the component to NOT be tracked
-const apiUrl = "http://localhost:8081/";
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 const trackDragDrop = async (id: string, from: number, to: number) => {
   try {
-    await fetch(`${apiUrl}track`, {
+    await fetch(`${API_URL}track`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id, from, to }),
@@ -33,7 +33,7 @@ const trackDragDrop = async (id: string, from: number, to: number) => {
 
 const saveNavigation = async (navItems: NavItem[]) => {
   try {
-    await fetch(`${apiUrl}nav`, {
+    await fetch(`${API_URL}nav`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(navItems),
