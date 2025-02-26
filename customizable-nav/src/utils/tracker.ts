@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const trackDragDrop = async (id: number, from: number, to: number) => {
     try {
       const response = await fetch("http://localhost:8081/track", {
