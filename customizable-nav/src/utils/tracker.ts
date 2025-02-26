@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
 export const trackDragDrop = async (id: number, from: number, to: number) => {
     try {
-      const response = await fetch("http://localhost:8081/track", {
+      const response = await fetch(`${API_URL}track`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ id, from, to }),
@@ -14,7 +16,7 @@ export const trackDragDrop = async (id: number, from: number, to: number) => {
   
   export const saveNavTree = async (navTree: any[]) => {
     try {
-      const response = await fetch("http://localhost:8081/nav", {
+      const response = await fetch(`${API_URL}nav`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(navTree),
